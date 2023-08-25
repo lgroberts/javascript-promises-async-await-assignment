@@ -45,3 +45,14 @@
 
 
 //END OF ASSIGNMENT
+
+async function getCatFacts(number) {
+
+    let response =  await fetch("https://catfact.ninja/facts?limit="+number);
+    let json = await response.json();
+    // console.log(json);
+    // console.log("hello");
+    return json;
+}
+
+// document.getElementById("fact-count").addEventListener("generate-btn", getCatFacts(document.getElementById("fact-count").value));
